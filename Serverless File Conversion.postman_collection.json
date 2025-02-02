@@ -35,7 +35,7 @@
 						"convert"
 					]
 				},
-				"description": "This api takes input of a csv file and change it to xml and then upload the converted file to an S3 bucket"
+				"description": "This api takes input of a csv file name uploaded on an S3 bucket and change it to xml and then upload the converted file to an S3 bucket"
 			},
 			"response": [
 				{
@@ -151,7 +151,7 @@
 						"convert"
 					]
 				},
-				"description": "This api takes input of a csv file and change it to pdf and then upload the converted file to an S3 bucket"
+				"description": "This api takes input of a csv file name uploaded on an S3 bucket and change it to pdf and then upload the converted file to an S3 bucket"
 			},
 			"response": [
 				{
@@ -267,7 +267,7 @@
 						"convert"
 					]
 				},
-				"description": "This api takes input of a pdf file and change it to docx and then upload the converted file to an S3 bucket"
+				"description": "This api takes input of a pdf file name uploaded on an S3 bucket and change it to docx and then upload the converted file to an S3 bucket"
 			},
 			"response": [
 				{
