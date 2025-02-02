@@ -1,0 +1,358 @@
+{
+	"info": {
+		"_postman_id": "90df816c-83db-438e-9904-e8d9c1f1e147",
+		"name": "Serverless File Conversion",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40932582"
+	},
+	"item": [
+		{
+			"name": "csv to xml",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"file_name\": \"test.csv\",\r\n    \"conversion_type\": \"csv_to_xml\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ekj4pwj3k2.execute-api.ap-south-1.amazonaws.com/dev/convert",
+					"protocol": "https",
+					"host": [
+						"ekj4pwj3k2",
+						"execute-api",
+						"ap-south-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"convert"
+					]
+				},
+				"description": "This api takes input of a csv file and change it to xml and then upload the converted file to an S3 bucket"
+			},
+			"response": [
+				{
+					"name": "csv to xml",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"file_name\": \"test.csv\",\r\n    \"conversion_type\": \"csv_to_xml\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ekj4pwj3k2.execute-api.ap-south-1.amazonaws.com/dev/convert",
+							"protocol": "https",
+							"host": [
+								"ekj4pwj3k2",
+								"execute-api",
+								"ap-south-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"convert"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "78"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 02 Feb 2025 12:16:32 GMT"
+						},
+						{
+							"key": "X-Amzn-Trace-Id",
+							"value": "Root=1-679f6220-4dc66dd22e20fe2a00f64ea9;Parent=461fa43bc195c32e;Sampled=0;Lineage=1:3454d4b4:0"
+						},
+						{
+							"key": "x-amzn-RequestId",
+							"value": "511f7d2f-4b86-4937-b170-24e480729288"
+						},
+						{
+							"key": "x-amz-apigw-id",
+							"value": "FWxFKFqIBcwEbrQ="
+						},
+						{
+							"key": "X-Cache",
+							"value": "Miss from cloudfront"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 9587b44529e8cf56394c9f98d09a586c.cloudfront.net (CloudFront)"
+						},
+						{
+							"key": "X-Amz-Cf-Pop",
+							"value": "DEL54-P1"
+						},
+						{
+							"key": "X-Amz-Cf-Id",
+							"value": "TYpZ7UYD9dErUqLdlPA4EZOhUELGB4Cffgrl3cQYZwdsNyl6-CHmtQ=="
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"File converted and uploaded successfully\",\n    \"s3_file\": \"test.xml\"\n}"
+				}
+			]
+		},
+		{
+			"name": "csv to pdf",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"file_name\": \"test.csv\",\r\n    \"conversion_type\": \"csv_to_pdf\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ekj4pwj3k2.execute-api.ap-south-1.amazonaws.com/dev/convert",
+					"protocol": "https",
+					"host": [
+						"ekj4pwj3k2",
+						"execute-api",
+						"ap-south-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"convert"
+					]
+				},
+				"description": "This api takes input of a csv file and change it to pdf and then upload the converted file to an S3 bucket"
+			},
+			"response": [
+				{
+					"name": "csv to pdf",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"file_name\": \"test.csv\",\r\n    \"conversion_type\": \"csv_to_pdf\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ekj4pwj3k2.execute-api.ap-south-1.amazonaws.com/dev/convert",
+							"protocol": "https",
+							"host": [
+								"ekj4pwj3k2",
+								"execute-api",
+								"ap-south-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"convert"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "78"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 02 Feb 2025 12:17:23 GMT"
+						},
+						{
+							"key": "X-Amzn-Trace-Id",
+							"value": "Root=1-679f6253-22e77949140a32b6075e216d;Parent=6b05c975b07318f3;Sampled=0;Lineage=1:3454d4b4:0"
+						},
+						{
+							"key": "x-amzn-RequestId",
+							"value": "9f03e83d-ef3d-4e8f-99bd-43391507d6b4"
+						},
+						{
+							"key": "x-amz-apigw-id",
+							"value": "FWxNCGixBcwERUA="
+						},
+						{
+							"key": "X-Cache",
+							"value": "Miss from cloudfront"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 9587b44529e8cf56394c9f98d09a586c.cloudfront.net (CloudFront)"
+						},
+						{
+							"key": "X-Amz-Cf-Pop",
+							"value": "DEL54-P1"
+						},
+						{
+							"key": "X-Amz-Cf-Id",
+							"value": "AroalmUbyF5mrRNlF6_cbrdAUhLzAH-xHsKyqUd47S6hvJBsmDBHgQ=="
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"File converted and uploaded successfully\",\n    \"s3_file\": \"test.pdf\"\n}"
+				}
+			]
+		},
+		{
+			"name": "pdf to word",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"file_name\": \"test.pdf\",\r\n    \"conversion_type\": \"pdf_to_word\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ekj4pwj3k2.execute-api.ap-south-1.amazonaws.com/dev/convert",
+					"protocol": "https",
+					"host": [
+						"ekj4pwj3k2",
+						"execute-api",
+						"ap-south-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"convert"
+					]
+				},
+				"description": "This api takes input of a pdf file and change it to docx and then upload the converted file to an S3 bucket"
+			},
+			"response": [
+				{
+					"name": "pdf to word",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"file_name\": \"test.pdf\",\r\n    \"conversion_type\": \"pdf_to_word\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ekj4pwj3k2.execute-api.ap-south-1.amazonaws.com/dev/convert",
+							"protocol": "https",
+							"host": [
+								"ekj4pwj3k2",
+								"execute-api",
+								"ap-south-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"convert"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "79"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 02 Feb 2025 12:17:27 GMT"
+						},
+						{
+							"key": "X-Amzn-Trace-Id",
+							"value": "Root=1-679f6257-1ddd626d1b862dcc6551a4da;Parent=19c08276c4543dd5;Sampled=0;Lineage=1:3454d4b4:0"
+						},
+						{
+							"key": "x-amzn-RequestId",
+							"value": "a3c9b40d-a71e-4e4f-b030-2929591e9386"
+						},
+						{
+							"key": "x-amz-apigw-id",
+							"value": "FWxNtH-7BcwEX0A="
+						},
+						{
+							"key": "X-Cache",
+							"value": "Miss from cloudfront"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 9587b44529e8cf56394c9f98d09a586c.cloudfront.net (CloudFront)"
+						},
+						{
+							"key": "X-Amz-Cf-Pop",
+							"value": "DEL54-P1"
+						},
+						{
+							"key": "X-Amz-Cf-Id",
+							"value": "uuvu0-Hd369-D9UBZDcrjR9JRBIt9gx-hEqF_j_4nOhN5QF3eeUZxA=="
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"File converted and uploaded successfully\",\n    \"s3_file\": \"test.docx\"\n}"
+				}
+			]
+		}
+	]
+}
