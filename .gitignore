@@ -21,3 +21,4 @@ var/
 .s3
 package.json
 package-lock.json
+.gitignore
