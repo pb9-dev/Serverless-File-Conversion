@@ -1,0 +1,31 @@
+service: File-converter-api
+
+provider:
+  name: aws
+  runtime: python3.11
+  region: ap-south-1
+  memorySize: 256
+  timeout: 29
+  iamRoleStatements:
+    - Effect: "Allow"
+      Action:
+        - "s3:GetObject"
+        - "s3:PutObject"
+      Resource: "arn:aws:s3:::file-conversion-bucket-pipeline/*"
+
+functions:
+  fileConversion:
+    handler: handler/handler.file_conversion
+    layers:
+      - arn:aws:lambda:ap-south-1:770693421928:layer:Klayers-p311-pandas:18
+      - arn:aws:lambda:ap-south-1:770693421928:layer:Klayers-p311-reportlab:7
+      - arn:aws:lambda:ap-south-1:770693421928:layer:Klayers-p311-Pillow:7
+      - arn:aws:lambda:ap-south-1:770693421928:layer:Klayers-p311-python-docx:8
+      - arn:aws:lambda:ap-south-1:770693421928:layer:Klayers-p311-PyMuPDF:7
+    events:
+      - http:
+          path: convert
+          method: post
+          cors: true
+    environment:
+      BUCKET_NAME: "file-conversion-bucket-pipeline"
